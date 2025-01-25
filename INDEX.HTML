@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #ffffff;
+        }
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 4em 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3em;
+            color: #fff;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        nav {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1em;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #6a11cb;
+        }
+        main {
+            padding: 2em;
+        }
+        section {
+            margin-bottom: 2em;
+        }
+        .skills-grid, .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .skill, .project {
+            flex: 1 1 calc(33.333% - 1em);
+            background-color: #2c2c54;
+            padding: 1.5em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .skill:hover, .project:hover {
+            transform: translateY(-10px);
+            background-color: #3c3c6e;
+        }
+        .projects-grid {
+            justify-content: space-between;
+        }
+        #contact form input, #contact form textarea {
+            width: 100%;
+            padding: 1em;
+            margin: 0.5em 0;
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
+        #contact form button {
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            padding: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #contact form button:hover {
+            background-color: #5a0bb3;
+        }
+        footer {
+            background-color: #1e1e2f;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .skill img, .project img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1 id="hero-text">Welcome to My Portfolio</h1>
+            <p id="hero-subtext">Web Developer | Ethical Hacker | Backend & Full Stack Developer</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I am a passionate developer skilled in building secure and scalable solutions. My expertise lies in backend development, full stack development, and ethical hacking to ensure robust and safe systems.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="images/HTMLCSS Image.png" alt="HTML/CSS">
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="skill">
+                    <img src="images/JAVASCRIPT.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="images/NODEJS.png" alt="Node.js">
+                    <p>Node.js</p>
+                </div>
+                <div class="skill">
+                    <img src="images/PYTHON.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="images/ETHICAL HACKING.jpg" alt="Ethical Hacking">
+                    <p>Ethical Hacking</p>
+                </div>
+                <div class="skill">
+                    <img src="images/DB.jpg" alt="Database Management">
+                    <p>Database Management</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="images/SECURE LOGIN SYSTEM.png" alt="Secure Login System">
+                    <h3>Secure Login System</h3>
+                    <p>A secure and efficient login system with multi-factor authentication.</p>
+                </div>
+                <div class="project">
+                    <img src="images/REAL TIME CHAT.png" alt="Real-Time Chat Application">
+                    <h3>Real-Time Chat Application</h3>
+                    <p>A responsive and real-time chat application using WebSocket and Node.js.</p>
+                </div>
+                <div class="project">
+                    <img src="images/E COMMERCE.jpg" alt="E-commerce Platform">
+                    <h3>E-commerce Platform</h3>
+                    <p>An online store with payment integration and admin dashboards.</p>
+                </div>
+                <div class="project">
+                    <img src="images/pent.jpg" alt="Penetration Testing Toolkit">
+                    <h3>Penetration Testing Toolkit</h3>
+                    <p>A toolkit for conducting penetration tests on web applications.</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // GSAP animations
+        gsap.from("#hero-text", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+        gsap.from("#hero-subtext", { duration: 1.2, y: -50, opacity: 0, delay: 0.3, ease: "power2.out" });
+        gsap.from("section", { duration: 1, opacity: 0, stagger: 0.3, ease: "power2.out" });
+    </script>
+    
+</body>
+</html>
